@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripcion - La Otra Politica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Sidebar con imagen del candidato -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="candidate-image-container">
+                    <img src="assets/images/profeVotos.jpg" alt="Candidato al Senado" class="candidate-image">
+                    <div class="glass-overlay"></div>
+                </div>
+                <div class="sidebar-text">
+                    <h2>La Otra Política</h2>
+                    <p>Educamos a quienes quieren liderar con propósito e integridad</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <div class="form-container">
+                <div class="form-header">
+                    <img src="assets/images/profe-senador.png" alt="La Otra Política" class="logo">
+                    <h1>Formulario de Inscripción</h1>
+                    <p class="subtitle">Únete a nuestro proceso educativo</p>
+                </div>
+
+                <form id="inscripcionForm" class="glass-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cedula">Cedula</label>
+                            <input type="text" id="cedula" name="cedula" required placeholder="Numero de cedula">
+                            <div class="input-glow"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Telefono</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="Numero de telefono">
+                            <div class="input-glow"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="departamento">Departamento</label>
+                            <select id="departamento" name="departamento" required>
+                                <option value="">Selecciona tu departamento</option>
+                                <option value="Amazonas">Amazonas</option>
+                                <option value="Antioquia">Antioquia</option>
+                                <option value="Arauca">Arauca</option>
+                                <option value="Atlantico">Atlantico</option>
+                                <option value="Bogota D.C.">Bogota D.C.</option>
+                                <option value="Bolivar">Bolivar</option>
+                                <option value="Boyaca">Boyaca</option>
+                                <option value="Caldas">Caldas</option>
+                                <option value="Caqueta">Caqueta</option>
+                                <option value="Casanare">Casanare</option>
+                                <option value="Cauca">Cauca</option>
+                                <option value="Cesar">Cesar</option>
+                                <option value="Choco">Choco</option>
+                                <option value="Cordoba">Cordoba</option>
+                                <option value="Cundinamarca">Cundinamarca</option>
+                                <option value="Guainia">Guainia</option>
+                                <option value="Guaviare">Guaviare</option>
+                                <option value="Huila">Huila</option>
+                                <option value="La Guajira">La Guajira</option>
+                                <option value="Magdalena">Magdalena</option>
+                                <option value="Meta">Meta</option>
+                                <option value="Narino">Narino</option>
+                                <option value="Norte de Santander">Norte de Santander</option>
+                                <option value="Putumayo">Putumayo</option>
+                                <option value="Quindio">Quindio</option>
+                                <option value="Risaralda">Risaralda</option>
+                                <option value="San Andres y Providencia">San Andres y Providencia</option>
+                                <option value="Santander">Santander</option>
+                                <option value="Sucre">Sucre</option>
+                                <option value="Tolima">Tolima</option>
+                                <option value="Valle del Cauca">Valle del Cauca</option>
+                                <option value="Vaupes">Vaupes</option>
+                                <option value="Vichada">Vichada</option>
+                            </select>
+                            <div class="input-glow"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" id="ciudad" name="ciudad" required placeholder="Tu ciudad">
+                            <div class="input-glow"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="profesion">Profesion</label>
+                        <select id="profesion" name="profesion" required>
+                            <option value="">Selecciona tu profesion</option>
+                            <optgroup label="Politica y Gobierno">
+                                <option value="Politologo">Politologo/a</option>
+                                <option value="Abogado">Abogado/a</option>
+                                <option value="Administrador Publico">Administrador/a Publico/a</option>
+                                <option value="Economista">Economista</option>
+                                <option value="Sociologo">Sociologo/a</option>
+                                <option value="Internacionalista">Internacionalista</option>
+                                <option value="Funcionario Publico">Funcionario/a Publico/a</option>
+                                <option value="Asesor Politico">Asesor/a Politico/a</option>
+                                <option value="Gestor Social">Gestor/a Social</option>
+                                <option value="Lider Comunitario">Lider Comunitario/a</option>
+                            </optgroup>
+                            <optgroup label="Salud">
+                                <option value="Medico">Medico/a</option>
+                                <option value="Enfermero">Enfermero/a</option>
+                                <option value="Psicologo">Psicologo/a</option>
+                                <option value="Odontologo">Odontologo/a</option>
+                                <option value="Fisioterapeuta">Fisioterapeuta</option>
+                                <option value="Nutricionista">Nutricionista</option>
+                                <option value="Trabajador Social">Trabajador/a Social</option>
+                            </optgroup>
+                            <optgroup label="Educacion">
+                                <option value="Docente">Docente</option>
+                                <option value="Pedagogo">Pedagogo/a</option>
+                                <option value="Licenciado">Licenciado/a</option>
+                                <option value="Investigador">Investigador/a</option>
+                            </optgroup>
+                            <optgroup label="Ingenieria y Tecnologia">
+                                <option value="Ingeniero Civil">Ingeniero/a Civil</option>
+                                <option value="Ingeniero de Sistemas">Ingeniero/a de Sistemas</option>
+                                <option value="Ingeniero Industrial">Ingeniero/a Industrial</option>
+                                <option value="Ingeniero Ambiental">Ingeniero/a Ambiental</option>
+                                <option value="Arquitecto">Arquitecto/a</option>
+                                <option value="Desarrollador de Software">Desarrollador/a de Software</option>
+                            </optgroup>
+                            <optgroup label="Negocios y Administracion">
+                                <option value="Administrador de Empresas">Administrador/a de Empresas</option>
+                                <option value="Contador">Contador/a</option>
+                                <option value="Emprendedor">Emprendedor/a</option>
+                                <option value="Comerciante">Comerciante</option>
+                                <option value="Mercadologo">Mercadologo/a</option>
+                            </optgroup>
+                            <optgroup label="Comunicacion y Artes">
+                                <option value="Comunicador Social">Comunicador/a Social</option>
+                                <option value="Periodista">Periodista</option>
+                                <option value="Disenador">Disenador/a</option>
+                                <option value="Publicista">Publicista</option>
+                                <option value="Artista">Artista</option>
+                                <option value="Musico">Musico/a</option>
+                            </optgroup>
+                            <optgroup label="Agropecuario">
+                                <option value="Agronomo">Agronomo/a</option>
+                                <option value="Veterinario">Veterinario/a</option>
+                                <option value="Zootecnista">Zootecnista</option>
+                                <option value="Agricultor">Agricultor/a</option>
+                                <option value="Ganadero">Ganadero/a</option>
+                            </optgroup>
+                            <optgroup label="Otros">
+                                <option value="Estudiante">Estudiante</option>
+                                <option value="Tecnico">Tecnico/a</option>
+                                <option value="Tecnólogo">Tecnologo/a</option>
+                                <option value="Militar">Militar</option>
+                                <option value="Policia">Policia</option>
+                                <option value="Pensionado">Pensionado/a</option>
+                                <option value="Independiente">Independiente</option>
+                                <option value="Otro">Otro</option>
+                            </optgroup>
+                        </select>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group hidden" id="profesionOtraContainer">
+                        <label for="profesionOtra">Especifica tu profesion</label>
+                        <input type="text" id="profesionOtra" name="profesionOtra" placeholder="Escribe tu profesion">
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nombreEmprendimiento">Nombre del emprendimiento</label>
+                        <input type="text" id="nombreEmprendimiento" name="nombreEmprendimiento" required placeholder="Nombre de tu emprendimiento">
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="redesSociales">Redes sociales del emprendimiento</label>
+                        <input type="text" id="redesSociales" name="redesSociales" required placeholder="Instagram, Facebook, TikTok, etc.">
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="retosEmprendimiento">Principales retos que tiene su emprendimiento</label>
+                        <textarea id="retosEmprendimiento" name="retosEmprendimiento" required placeholder="Describe los principales retos de tu emprendimiento" rows="4"></textarea>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Enviar Inscripcion</span>
+                        <span class="btn-loader hidden"></span>
+                    </button>
+                </form>
+
+                <!-- Mensaje de exito/error -->
+                <div id="messageContainer" class="message-container hidden">
+                    <div class="message-content">
+                        <div class="message-icon"></div>
+                        <p class="message-text"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <img src="assets/images/profe-senador.png" alt="El Derecho Para Todos" class="footer-logo" />
+                <p class="footer-description">Educamos a quienes quieren liderar con proposito e integridad</p>
+                <ul class="social">
+                    <li>
+                        <a href="https://wa.me/573116005672?text=Profe%2C%20quiero%20ser%20parte%20de%20La%20Otra%20Pol%C3%ADtica" aria-label="WhatsApp" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20.52 3.48A11.94 11.94 0 0012.01 0C5.39 0 .01 5.37.01 12c0 2.11.55 4.15 1.59 5.95L0 24l6.2-1.63a11.93 11.93 0 005.81 1.54h.01c6.62 0 12-5.37 12-12 0-3.2-1.25-6.2-3.5-8.43zM12.02 21.3h-.01a9.32 9.32 0 01-4.75-1.3l-.34-.2-3.69.97.99-3.6-.22-.37A9.28 9.28 0 012.7 12c0-5.14 4.19-9.32 9.35-9.32 2.5 0 4.85.97 6.62 2.73a9.27 9.27 0 012.74 6.6c0 5.14-4.2 9.3-9.38 9.3zm5.37-6.95c-.29-.15-1.73-.85-2-.94-.27-.1-.46-.14-.65.14-.19.29-.74.94-.9 1.13-.17.2-.34.22-.63.08-.29-.14-1.23-.45-2.35-1.44-.87-.75-1.45-1.68-1.62-1.96-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.56-.89-2.13-.23-.56-.47-.49-.65-.5l-.56-.01c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.46 0 1.45 1.03 2.85 1.17 3.05.14.2 2.02 3.2 4.89 4.49.68.29 1.22.46 1.63.59.68.22 1.3.19 1.79.11.55-.08 1.73-.71 1.98-1.4.24-.68.24-1.26.17-1.39-.07-.13-.26-.2-.55-.35z"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/elprofecharles/" aria-label="Instagram" class="social-link">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zm0 2a3.5 3.5 0 110 7 3.5 3.5 0 010-7zM18 6.2a1 1 0 100 2 1 1 0 000-2z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://web.facebook.com/charlesfigueroalopera" aria-label="Facebook" class="social-link">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.56 9.9v-7h-2.3V12h2.3V9.8c0-2.27 1.35-3.53 3.42-3.53.99 0 2.02.18 2.02.18v2.23h-1.14c-1.12 0-1.47.7-1.47 1.41V12h2.5l-.4 2.9h-2.1v7A10 10 0 0022 12z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@ElProfeCharles" aria-label="YouTube" class="social-link">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.7 3.5 12 3.5 12 3.5s-7.7 0-9.4.6A3 3 0 00.5 6.2 31.7 31.7 0 000 12c0 1.9.2 3.8.5 5.8a3 3 0 002.1 2.1c1.7.6 9.4.6 9.4.6s7.7 0 9.4-.6a3 3 0 002.1-2.1c.3-2 .5-3.9.5-5.8 0-1.9-.2-3.8-.5-5.8zM9.8 15.5v-7l6.3 3.5-6.3 3.5z"/></svg>
+                        </a>
+                    </li>
+                </ul>
+                <hr class="footer-sep" />
+            </div>
+            <div class="footer-right">
+                <div class="profile-card">
+                    <img src="assets/images/charles.png" alt="El Profe Charles" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
