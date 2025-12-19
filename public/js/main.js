@@ -197,5 +197,95 @@ document.addEventListener('DOMContentLoaded', () => {
         candidateCard.addEventListener('mouseenter', () => {
             candidateCard.style.transition = 'transform 0.1s ease-out, box-shadow 0.3s ease';
         });
+
+        // Efecto de confeti al cargar
+        createConfettiEffect(candidateCard);
+    }
+
+    // Funcion para crear efecto de confeti
+    function createConfettiEffect(container) {
+        const colors = ['#442e7d', '#5a3d9e', '#7c5fc4', '#9d84d4', '#ffffff', '#ffd700', '#ff6b6b', '#4ecdc4'];
+        const confettiCount = 50;
+        const confettiContainer = document.createElement('div');
+        confettiContainer.className = 'confetti-container';
+        confettiContainer.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            border-radius: inherit;
+            z-index: 10;
+        `;
+        container.appendChild(confettiContainer);
+
+        for (let i = 0; i < confettiCount; i++) {
+            setTimeout(() => {
+                const confetti = document.createElement('div');
+                const size = Math.random() * 10 + 5;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const startX = Math.random() * 100;
+                const startY = -10;
+                const endX = startX + (Math.random() - 0.5) * 60;
+                const endY = 110 + Math.random() * 20;
+                const rotation = Math.random() * 720 - 360;
+                const duration = Math.random() * 2 + 2;
+                const delay = Math.random() * 0.5;
+                const shape = Math.random() > 0.5 ? '50%' : '0';
+
+                confetti.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    background: ${color};
+                    border-radius: ${shape};
+                    left: ${startX}%;
+                    top: ${startY}%;
+                    opacity: 1;
+                    transform: rotate(0deg);
+                    animation: confettiFall${i} ${duration}s ease-out ${delay}s forwards;
+                `;
+
+                // Crear keyframes dinamicos
+                const keyframes = `
+                    @keyframes confettiFall${i} {
+                        0% {
+                            left: ${startX}%;
+                            top: ${startY}%;
+                            opacity: 1;
+                            transform: rotate(0deg) scale(1);
+                        }
+                        50% {
+                            opacity: 1;
+                        }
+                        100% {
+                            left: ${endX}%;
+                            top: ${endY}%;
+                            opacity: 0;
+                            transform: rotate(${rotation}deg) scale(0.5);
+                        }
+                    }
+                `;
+
+                const styleSheet = document.createElement('style');
+                styleSheet.textContent = keyframes;
+                document.head.appendChild(styleSheet);
+
+                confettiContainer.appendChild(confetti);
+
+                // Limpiar confeti despues de la animacion
+                setTimeout(() => {
+                    confetti.remove();
+                    styleSheet.remove();
+                }, (duration + delay) * 1000 + 100);
+            }, i * 30);
+        }
+
+        // Limpiar contenedor despues de todas las animaciones
+        setTimeout(() => {
+            confettiContainer.remove();
+        }, 5000);
     }
 });

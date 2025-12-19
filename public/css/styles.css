@@ -127,7 +127,7 @@ body::before {
 .candidate-image-container {
     position: relative;
     width: 100%;
-    max-width: 350px;
+    max-width: 480px;
     aspect-ratio: 3/4;
     border-radius: var(--radius-xl);
     overflow: hidden;
@@ -184,27 +184,7 @@ body::before {
     pointer-events: none;
 }
 
-.sidebar-text {
-    text-align: center;
-    margin-top: var(--spacing-lg);
-    padding: 0 var(--spacing-md);
-}
-
-.sidebar-text h2 {
-    font-size: 2.75rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: var(--spacing-xs);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.sidebar-text p {
-    font-size: 1.5rem;
-    color: var(--white-muted);
-    max-width: 280px;
-    margin: 0 auto;
-}
+/* sidebar-text eliminado - estilos ya no necesarios */
 
 /* =====================================================
    Contenido Principal
@@ -689,7 +669,7 @@ select optgroup {
     }
 
     .candidate-image-container {
-        max-width: 280px;
+        max-width: 380px;
     }
 
     .main-content {
@@ -708,11 +688,7 @@ select optgroup {
     }
 
     .candidate-image-container {
-        max-width: 220px;
-    }
-
-    .sidebar-text h2 {
-        font-size: 1.4rem;
+        max-width: 320px;
     }
 
     .main-content {
@@ -767,15 +743,7 @@ select optgroup {
     }
 
     .candidate-image-container {
-        max-width: 180px;
-    }
-
-    .sidebar-text {
-        margin-top: var(--spacing-md);
-    }
-
-    .sidebar-text h2 {
-        font-size: 1.2rem;
+        max-width: 260px;
     }
 
     .main-content {
